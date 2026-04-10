@@ -65,6 +65,16 @@ jobs:
           echo "$CHANGELOG" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
+      - name: Package release
+        run: |
+          mkdir -p cs-rep-plugin
+          cp -r .millennium cs-rep-plugin/
+          cp -r backend cs-rep-plugin/
+          cp plugin.json cs-rep-plugin/
+          cp LICENSE cs-rep-plugin/
+          cp README.md cs-rep-plugin/
+          zip -r cs-rep-plugin-v${{ steps.version.outputs.new_version }}.zip cs-rep-plugin
+
       - name: Create release
         uses: ncipollo/release-action@v1
         with:
@@ -72,6 +82,7 @@ jobs:
           name: Release v${{ steps.version.outputs.new_version }}
           body: |
             ${{ steps.version.outputs.changelog }}
+          artifacts: cs-rep-plugin-v${{ steps.version.outputs.new_version }}.zip
 
       - name: Merge develop into main
         run: |
