@@ -1,0 +1,7 @@
+{
+	"$schema": "https://raw.githubusercontent.com/SteamClientHomebrew/Millennium/main/src/sys/plugin-schema.json",
+	"name": "cs-rep-plugin",
+	"common_name": "CSRep Plugin",
+	"description": "A plugin for Millennium that inserts a CSRep link on each user's profile page.",
+	"backendType": "lua"
+}

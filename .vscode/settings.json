@@ -1,0 +1,7 @@
+{
+  "Lua.diagnostics.globals": [
+    "test_frontend_message_callback"
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+}
