@@ -13,7 +13,7 @@
   },
   "type": "module",
   "name": "cs-rep-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A plugin for Millennium that inserts a CSRep link on each user's profile page.",
   "main": "./frontend/index.jsx",
   "author": "Christian Grothaus",
